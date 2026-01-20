@@ -1,0 +1,195 @@
+\documentclass{article}
+
+%%\chapterstyle{veelo}
+%% KAPITULU FORMATU BATZUK ARAZOAK EMATEN DITUZTE DOKUMENTUA 
+%% MOZTERAKOAN (croppedsize AUKERAREKIN, BEHEAN AGERTZEN DENA). 
+%% JARRAIAN ALTERNATIBA SGURU BATZUK DAUDE
+
+%\chapterstyle{default}
+%\chapterstyle{bianchi}
+%\chapterstyle{brotherton}
+%\chapterstyle{demo2}
+%\chapterstyle{ell}
+%\chapterstyle{ger}
+%\chapterstyle{wilsondob}
+
+
+
+
+
+
+%% PAKETE HONEN AGINDUAK ERABILTZEN BADIRA, ALDATU HIZKUNTZA AUKERA %%
+%% SI SE USAN LOS COMANDOS DE ESTE PAQUETE, CAMBIAR LA OPCIÓN DE IDIOMA %%
+\usepackage{cancel}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
+\usepackage{graphicx}
+\usepackage[linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+%\usepackage{enumitem}
+
+%% INFORMAZIOA / INFORMACIÓN %%
+\newcommand{\egilea}{
+    Urko Bidaurre\\
+}
+\newcommand{\irakaslea} {
+      Alicia Perez Ramirez
+}
+\newcommand{\izenburua}{Datuen deskribapen operatiboa}
+\newcommand{\data}{\today}
+
+
+%% BAKARRIK BAT DESKOMENTATU, GRADU AMAIERAKO LANA BADA. BESTELA, DENAK KOMENTATU%%
+%% DESCOMENTAR SOLO UNO SI ES UN TRABAJO FIN DE GRADO. SINO, COMENTAR TODOS%%
+
+\newcommand{\ikasketak}{Kudeaketaren eta Informazio Sistemen Informatikaren Ingeniaritzako Gradua}
+%\newcommand{\ikasketak}{Grado en Ingeniería Informática}
+%\newcommand{\ikasketak}{Adimen Artifizialeko Gradua}
+%\newcommand{\ikasketak}{Grado en Inteligencia Artificial}
+
+
+%% BAKARRIK BAT DESKOMENTATU, INGENIARITZA INFORMATIKAKOA BADA. BESTELA, DENAK KOMENTATU %%
+%% DESCOMENTAR SOLO UNO SI ES EN INGENIERÍA INFORMÁTICA. SINO, COMENTAR TODOS %%
+
+%\newcommand{\espezialitatea}{Konputazioa}
+%\newcommand{\espezialitatea}{Computación}
+%\newcommand{\espezialitatea}{Software Ingeniaritza}
+%\newcommand{\espezialitatea}{Ingeniería de Software}
+%\newcommand{\espezialitatea}{Konputagailuen Ingeniaritza}
+\newcommand{\espezialitatea}{
+    Erabakiak Hartzeko Euskarri Sistemak\\
+    }
+
+
+%% BAKARRIK BAT DESKOMENTATU MASTER AMAIERAKO LANA BADA. BESTELA, DENAK KOMENTATU%%
+%% DESCOMENTAR SOLO UNO SI ES UN TRABAJO FIN DE MASTER. SINO, COMENTAR TODOS%%
+
+%\newcommand{\ikasketak}{Máster Universitario en Ingeniería Computacional y Sistemas Inteligentes}
+%\newcommand{\ikasketak}{Konputazio Ingeniaritza eta Sistema Adimentsuak Unibertsitate Masterra}
+
+%% TESIENTZAKO KONFIGURATU
+%\newcommand{\saila}{Department of Computer Science and Artificial Intelligence}
+%\newcommand{\phdarloa}{Computer Science}
+%% KOMENTATU A4 FORMATUAN ATERATZEKO, FORMATU TXIKIAGOAN AGERTZEKO 
+%% GERO INPRIMATZEKO. MOZTEKO MARKAK IKUSTEKO GEHITU showtrims AUKERA
+%% memoir KLASEAREN ARGUMENTUETAN
+%\newcommand{\croppedsize}
+
+%% DOKUMENTUAREN HIZKUNTZA / IDIOMA DEL DOCUMENTO %%
+%% BAKARRIK BAT DESKOMENTATU / DESCOMENTAR SOLO UNO %%
+\newcommand{\euskaraz}
+%\newcommand{\castellano}
+%\newcommand{\english}
+
+
+\input config/macros
+
+\title{\izenburua}
+\author{\egilea}
+\date{\data}
+
+\begin{document}
+\thispagestyle{empty}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+
+\thispagestyle{empty}
+\begin{center}
+	
+  \includegraphics[width=0.75\textwidth]{config/FacultadInformatica-Gipuzkoa-bilingue-positivo-alta.jpg} \\[2cm]
+  
+  
+  {\LARGE {\gapizenburua}}\\[0.5cm]
+  {\Large \ikasketak}\\[0.25cm]
+  {\espezialitatea}
+  \vspace{2cm}
+  
+  
+  \HRule\\[0.5cm]
+  {\LARGE 
+    \textbf{\izenburua}
+  }
+  \HRule\\[0.5cm]
+
+  {\Large \textsl{\egilea}
+  
+   
+  \vfill
+  
+  \textbf{\zuzendariaktestua}\\
+  \irakaslea\\[2cm]
+  
+  \data
+  }
+  
+\end{center}
+\newpage
+\tableofcontents
+\newpage
+\section{Materiala}
+\begin{itemize}
+  \item Weka aplikazioa
+  \item Baliabide bibliografikoak:
+  \begin{itemize}
+    \item Informazio orokorra adibideekin: [Witten et al., 2011, Chap. 2]
+    \item Kontsulta praktikoak: \url{https://waikato.github.io/weka-wiki/}
+  \end{itemize}
+  \item eGelatik eskuragarri:
+  \begin{itemize}
+    \item Baliabide orokorrak: aplikazioaren eskuliburua
+    \item Praktikarako datu-sorta: heart-c.arff
+  \end{itemize}
+\end{itemize}
+
+\section{Helburuak}
+Praktika honen helburuak datu meatzaritzarako ikuspegi orokorra ematea da Weka aplikazioaren
+bitartez. Honetarako datu meatzaritzan informazioa erauzteko hiru teknika nagusiak aipatuko
+dira: \textbf{iragarpena}, \textbf{clustering} eta \textbf{asoziazioa}. Wekarako sarrera gisa ARFF fitxategien kudeaketan sakonduko dugu iragarpen ataza baten bitartez.
+
+Hurrengo konpetentziak landu:
+\begin{itemize}
+  \item \textbf{Zeharkako konpetentziak}:
+  \begin{itemize}
+    \item Lan autonomoa
+    \item Pentsamendu kritikoa
+  \end{itemize}
+  \item \textbf{Konpetentzia orokorrak:}
+  \begin{itemize}
+    \item Ikasketa automatikoaren funtsa deskribatzeko gai izatea
+    \item Datuen deskribapen operatiboa emateko gai izatea
+    \item Wekarako sarrera: atal ezberdinak bereizteko gai izatea
+  \end{itemize}
+\end{itemize}
+
+\section{Gidoia}
+\subsection{Aldez aurretiko lana}
+Praktika hau egiten hasi aurretik honako lanal eskatzen dira: 
+\begin{enumerate}
+  \item Gai hauei buruzko informazioa irakurri
+  \begin{itemize}
+    \item Machine learning: datuetatik ezaguerara . Ikasketa automatikoaren funtsa, datuetatik
+          erabiliz ezaguera edo informazioa erauztea da. Datuek, lortu nahi den ezagueraren
+          adierazgarri izan behar dute. Lagin-espazioko adibide esanguratsuak.
+          Irakurri: \cite[Witten et al., 2011, Chap. 1]{Witten2011}
+    \item Weka-ko datuen formatua: ARFF. Atributuak erabiltzen dira datuen deskribapen
+          operatiboa emateko. Izan ere, atributuen bitartez deskribatutako datuei buruketako
+          instantzia (edo adibide) deritze. Alegia, instantziak karakterizatzeko atributuak erabiltzen dira.
+          Irakurri: \cite[Witten et al., 2011, Chap. 2]{Witten2011}
+  \end{itemize}
+  \item Weka deskargatu eta instalatu: \url{http://www.cs.waikato.ac.nz/ml/weka/}
+\end{enumerate}
+
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{sample}
+\begin{itemize}
+    \item \emph{https://www.lystloc.com/blog/what-is-a-travelling-salesman-problem-tsp/}
+    \item \emph{SYMPLEX: SIMPLEX SOLVER}
+\end{itemize}
+
+\end{document}
