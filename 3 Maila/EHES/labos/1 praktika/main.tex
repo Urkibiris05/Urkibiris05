@@ -174,18 +174,62 @@ Praktika hau egiten hasi aurretik honako lanal eskatzen dira:
     \item Machine learning: datuetatik ezaguerara . Ikasketa automatikoaren funtsa, datuetatik
           erabiliz ezaguera edo informazioa erauztea da. Datuek, lortu nahi den ezagueraren
           adierazgarri izan behar dute. Lagin-espazioko adibide esanguratsuak.
-          Irakurri: \cite[Witten et al., 2011, Chap. 1]{Witten2011}
+          Irakurri: \cite[Chap. 1]{Witten2011}
     \item Weka-ko datuen formatua: ARFF. Atributuak erabiltzen dira datuen deskribapen
           operatiboa emateko. Izan ere, atributuen bitartez deskribatutako datuei buruketako
           instantzia (edo adibide) deritze. Alegia, instantziak karakterizatzeko atributuak erabiltzen dira.
-          Irakurri: \cite[Witten et al., 2011, Chap. 2]{Witten2011}
+          Irakurri: \cite[Chap. 2]{Witten2011}
   \end{itemize}
   \item Weka deskargatu eta instalatu: \url{http://www.cs.waikato.ac.nz/ml/weka/}
 \end{enumerate}
+\subsection{Datu meatzaritzako paradigmak}
+Datu meatzaritzak mota honetako atazak ebazteko balio du:
+\begin{itemize}
+  \item Gene batzuen presentziaren arabera, etorkizunean gaixotasun bat izateko probabilitatea
+eman.
+  \item Biometria: begiko irisaren ezaugarri batzuen arabera, pertsona identifikatu
+  \item Bezero baten erosketen arabera, beste produktu batzuk gomendatui
+  \item Espezie bateko ezaugarrien arabera, bariedadeak bereiztu, alegia, taxonomiak deskubritu
+  \item Aseguru etxeetan antzeko jokaerak dituzten bezeroei antzeko produktuak eskaini
+  \item Iraganean entzundako musikaren arabera, musika gomendatu
+\end{itemize}
+Datuetatik informazioa erauzteko hiru paradigma nagusi bereizgten dira: iragarpena (edo
+sailkapen gainbegiratua), clustering (sailkapen ez-gainbegiratua) eta asoziazioa. Aurreko atazak
+hauetako batean sartzen dira. Hiru paradigmak deskribatu eta bakoitzerako adibideak eman,
+horretarako, iturri hau erabilgarria da: \cite[Sec. 2.1 y Sec. 1.3]{Witten2011}
 
+\subsection{Datuen deskribapen operatiboa}
+Praktika honetarako erabiliko dugun fitxategia \texttt{heart-c.arff} da.
+\begin{enumerate}[\textbf{\arabic*.}]
+  \item \textbf{Zein motatako informazioa (audio, irudiak, ...) dakar .arff fitxategiak? Zein da ARFFren esannahia? Zertarako erabiltzen dira mota honetako fitxategiak?} \cite[Sec. 2.1, 2.2, 11.1]{Witten2011}
+  \begin{itemize}
+    \item Informazioa: ARFF artxiboak ez du ez audiorik ez irudirik. Pazienteen ezaugarri klinikoak deskribatzen dituzten datu egituratu alfanumerikoak ditu.
+    \item ARFFren esanahia: \emph{Attribute-Relation File Format}-en siglak. Wekaren jatorrizko formatua da, atributu-multzo bat partekatzen duten instantzien zerrenda deskribatzeko.
+    \item Erabilera: Ikasketa automatikoko algoritmoek (Machine Learning) patroiak aurkitzeko prozesatuko dituzten datuak gordetzeko erabiltzen dira.
+  \end{itemize}
+  \item  \textbf{Editatu \texttt{.arff} fitxategia testu editore batekin. Burukoan agertzen den atazako deskribapena aztertu eta ondorengo galderei erantzun:}
+  \begin{enumerate}
+    \item Zertan datza ataza? Iragarpen (\emph{prediction}), taldekatze (\emph{clustering}) ala elkarketa (\emph{association}) buruketa da?
 
+    Diagnostikoa adierazten duen \texttt{num} (bihotzeko gaixotasuna) izeneko azken atributua dagoenez, eta besteetan oinarrituta iragarri nahi dugunez, Iragarpen ataza bat dela esan dezakegu, eta zehazkiago, saikapen ataza bat (irteera etiketa bat delako, ez zenbaki jarraitu bat).
+   
+    \item Buruketako deskribapenaren arabera, zenbat balio har ditzake klaseak? Daukagun
+lagin multzoan, zenbat balio har ditzake klaseak?
+
+    \texttt{num} klaseak 5 balio posiblerekin definituta dago: '$<50$', '$>50_1$', '$>50_2$', '$>50_3$', '$>50_4$'.
+
+    \item  \texttt{.arff} fitxategian  \emph{\%} ikurrarekin hasten diren lerroak, fitxategiko parte eragile dira?
+    
+    Ez, ez dira fitxategiko parte eragile. Datuak kargatzerakoan \emph{Weka}-k baztertzen dituen komentarioak dira.
+  \end{enumerate}
+  \item \textbf{Definitu: “Instantzia” eta “Atributu”} \cite[Sec. 2.2, 2.3]{Witten2011}
+  \begin{itemize}
+    \item \textbf{Instantzia:} Datu-errenkada bakoitza da (\texttt{@data}-ren ondoren agertzen diren errenkada bakoitza). Adibide zehatz bat adierazten du; kasu honetan, paziente espezifiko bat, bere datu klinikoekin.
+    \item \textbf{Atributu:} Definitutako zutabe edo propietate bakoitza da (\texttt{@attribute} erabiliz). Pazienteak deskribatzen dituzten ezaugarriak irudikatzen dituzte, hala nola adina, kolesterola eta abar.
+  \end{itemize}
+\end{enumerate}
 \newpage
-\bibliographystyle{plain}
+\bibliographystyle{apalike}
 \bibliography{sample}
 \begin{itemize}
     \item \emph{https://www.lystloc.com/blog/what-is-a-travelling-salesman-problem-tsp/}
