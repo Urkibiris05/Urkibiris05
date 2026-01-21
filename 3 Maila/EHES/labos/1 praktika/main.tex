@@ -227,7 +227,132 @@ lagin multzoan, zenbat balio har ditzake klaseak?
     \item \textbf{Instantzia:} Datu-errenkada bakoitza da (\texttt{@data}-ren ondoren agertzen diren errenkada bakoitza). Adibide zehatz bat adierazten du; kasu honetan, paziente espezifiko bat, bere datu klinikoekin.
     \item \textbf{Atributu:} Definitutako zutabe edo propietate bakoitza da (\texttt{@attribute} erabiliz). Pazienteak deskribatzen dituzten ezaugarriak irudikatzen dituzte, hala nola adina, kolesterola eta abar.
   \end{itemize}
+  \item \textbf{Zer motako atributuekin egiten du lan Wekak?}
+
+  Wekak nagusiki honako atributuekin egiten du lan:
+  \begin{itemize}
+    \item \textbf{Numerikoak:} Zenbakizko balioak (errealak edo osoak).
+    \item \textbf{Nominalak:} Etiketaz osatutako aurrez definitutako zerrenda (adbz. \texttt{arra}, \texttt{emea}).
+    \item Baita ere existitzen dira \emph{String}, \emph{Date} eta \emph{Relational}, nahiz eta fitxategi honetan numerikoak eta nominalak soilik egon.
+  \end{itemize}
+  \item \textbf{Wekan instantzia guztiek atributu kopuru bera dute?}
+  
+Bai. ARFF fitxategi estandar batean (trinkoa), instantzia guztiek balio kopuru bera izan behar dute, eta goiburuan definitutako atributuen ordenari dagokio zehazki. Datu bat falta bada, esplizituki markatu behar da, ez da zutabea ahazten.
+
+  \item \textbf{Wekan zein da atributu baterako daturik ez dugula adierazteko ikurra?}
+
+Atributu baterako daturik ez dugula adierazteko galdera ikurra (\emph{?}) erabiltzen da. 
+
+  \item \textbf{Aztertzen ari garen atazarako:}
+  \begin{itemize}
+    \item \textbf{Zenbat instantzia dago?} (N= 303)
+    \item \textbf{Instantziak karakterizatzeko zenbat atributu dago?} (n= 14) \textbf{Lehenengo 5 atributuetarako eta klaserako, galdera hauei erantzun:}
+    \begin{itemize}
+      \item Zein motakoa da atributua? (eg. nominala, zenbakizkoa, string, . . . )
+      \item Atributu bakoitzerako aztertu zenbat instantziek ez duten baliorik atributu horretan (missing values). Zein portzentaian?
+      \item Zenbat balio desberdin erregistratu dira atributu bakoitzerako? (distinct)
+      \item Atributu bakoitzerako, badago behin baino erregistratu ez den baliorik? (unique
+values)
+      \item Histogramen gaineko zenbakiek zer adierazten dute?
+      \item Numerikoak diren atributuetarako zein da erregistratu den balio minimo, maximoa, batazbestekoa eta desbiderapena?
+
+      \begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|c|c|l|}
+\hline
+\textbf{Atributua} & \textbf{Mota} & \textbf{Missing} & \textbf{Distinct} & \textbf{Iruzkinak} \\ \hline
+age & Numeric & 0 (0\%) & 41 & Tartea: 29-77 años \\ \hline
+sex & Nominal & 0 (0\%) & 2 & \{female, male\} \\ \hline
+cp & Nominal & 0 (0\%) & 4 & \{typ\_angina, asympt, non\_anginal...\} \\ \hline
+trestbps & Numeric & 0 (0\%) & 49 & Presio arteriala atseden egoeran \\ \hline
+chol & Numeric & 0 (0\%) & 152 & Kolesterol serikoa (mg/dl) \\ \hline
+\textbf{num (Klasea)} & Nominal & 0 (0\%) & 5 & \{<50, >50\_1, >50\_2, >50\_3, >50\_4\} \\ \hline
+\end{tabular}
+\caption{Lehenengo 5 atributuen deskribapen operatiboa eta \texttt{heart-c} dataset klasea.}
+\label{tab:atributuak_heart}
+\end{table}
+      \item Histogramak: Barren gaineko zenbakiek adierazten dute zenbat instantzia (paziente) erortzen diren maila edo kategoria horretan.
+      \item Numerikoak diren atributuentzat (\emph{age}, \emph{trestbps}, \emph{chol}, ...):
+    
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Atributua} & \textbf{Minimoa} & \textbf{Maximoa} & \textbf{Batazbestekoa} & \textbf{Desbiderapena estandarra} \\ \hline
+age & 29 & 77 & 54.366 & 9.082 \\ \hline
+trestbps & 94 & 200 & 131.624 & 17.538 \\ \hline
+chol & 126 & 564 & 246.264 & 51.831 \\ \hline
+\end{tabular}
+\caption{Estatistika deskriptiboak lehenengo 3 atributu numerikoetarako.}
+\label{tab:estatistikak_heart}
+\end{table}
+    \end{itemize}
+  \end{itemize}
+  \newpage
+  \item \textbf{Atributuak klasearekiko histograma aztertu.} \cite[Sec. 11.2]{Witten2011}
+  \begin{itemize}
+    \item \textbf{Intuitiboki, zeintzuk dira informazio gehien eskaintzen duten atributuak sailkapen
+          problemari aurre egite aldera? Alegia, atributu gutxirekin iragarpenak egiteko gai
+          izango ginen?} \\
+
+Intuitiboki, atributu bakoitzaren histogramak aztertuz, koloreak gehien desberdintzen edo bereizten dituzten atributuak izango dira sailkapen problemarekiko adierazgarriagoak.
+Hau da, atributu konkretu batek barra bat baldin badu, zeinetan ia guztia urdina den, eta beste bat zeinetan ia guztia gorria den, honek informazio asko ematen du, izan ere, atributu honek hartzen duen balioak
+azken sailkapenean eragin handia duela adierazten du.
+Ordea, atributu baten barra guztiak nahiko orekatuak baldin badaude (koloreari dagokionez), honek informazio gutxi ematen duela ondoriozta dezakegu, izan ere, atributu honen balioak aldatzeak ez du 
+azken sailkapenean eragin handirik izango. \\
+
+    \item \textbf{Badago korrelazioa aurkezten duten atributu-bikoteak? Korrelazionatutako atributuak erabiltzea erabilgarria izango da?}
+
+Bi atributuk grafiko oso antzekoak badituzte edo begi-bistako erlazio lineal bat badute (adibidez, "adina urteetan" eta "adina hilabeteetan"), korrelazioan egongo lirateke eta bat soberan egongo litzateke.
+  \end{itemize}
+  \item \textbf{Atributuak bikoteka aurkeztu: \texttt{Visualize} (goian, eskuman):}
+  \begin{itemize}
+    \item Iragarri nahi den klasearen balioak ondoen diskriminatzen duten atributu bikoteak
+          aukeratu.\\
+          \emph{\textbf{[TODO]}}
+    \item Informazio gutxien eskaintzen dituzten 3 atributu ezabatu eta datu fitxategia gorde izen honekin: \texttt{heart\_c\_3attManuallyRemoved.arff}. Jarraian, hasierako datuak
+          berreskuratu goiko botoia \emph{Undo} sakatuz.  \\
+          \emph{\textbf{[TODO]}}
+  \end{itemize}
 \end{enumerate}
+
+\newpage
+\section*{A \quad Galdetegia}
+\textbf{Zertarako erabili datuak datu meatzaritzan?}
+
+Datuak dira funtsezko lehengaia. Ezkutuko ereduak eta agerikoak ez diren harremanak aurkitzeko erabiltzen dira, informazio gordin hori ezagutza erabilgarri bihurtzeko.
+\begin{itemize}
+  \item Helburua datu horiek (adibide historikoak) prozesatzea da, etorkizuneko erabakiak hartzeko balio duten ereduak orokortu eta sortu ahal izateko.
+  \item Datu adierazgarririk gabe (adibide esanguratsuak), ezin da ikaskuntza automatikoa egin.
+\end{itemize}
+
+\noindent \textbf{Deskribatu ataza hauetako bakoitza eta adibide bat eman azalpena argitzeko:}
+
+\begin{itemize}
+  \item \textbf{Iragarpena} (\emph{Prediction / Supervised Classification}): Atributu espezifiko baten balioa iragartzean datza ("klase" deitua), beste atributuen balioetan oinarrituta. Sistemak erantzun zuzena ezagutzen den iraganeko adibideetatik ikasten du.
+  \item \textbf{Clustering} (\emph{Unsupervised Classification}): Datuen multzo bat talde edo kluster desberdinetan banatzean datza, non talde barruko instantzien arteko antzekotasuna handia den eta talde desberdinen artekoa txikia. Ez dago aurrez definitutako klase etiketarik.
+  \item \textbf{Asoziazioa} (\emph{Association}): Elementuen arteko erlazio edo eredu bateratuak bilatzen dira. Erregela gisa adierazi ohi dira $\rightarrow$ ``X pasatzen bada, orduan Y pasatu ohi da''.
+\end{itemize}
+
+\noindent \textbf{Zer erabiltzen da datuetako adibide bat deskribatzeko? Zer motako aldagaiak erabil daitezke datuak deskribatzeko?}
+
+Atributuak (edo ezaugarriak) erabiltzen dira. Instantzia (adibide) bakoitza atributu multzo finko batek karakterizatzen du. Wekak eta datu-meatzaritzak batez ere bi mota erabiltzen dituzte:
+
+\begin{enumerate}[\textbf{\arabic*.}]
+  \item \textbf{Zenbakizkoak (\emph{Numeric}):} Balio jarraituak edo neurgarriak (adib. age, chol).
+  \item \textbf{Nominalak (\emph{Nominal}):} Aurrez definitutako zerrenda bateko kategoriak edo etiketak (adib. sex {female, male}).
+\end{enumerate}
+
+\noindent \textbf{Iragarpen atazean, zer da klase aldagaia? Zer adierazten du aztertutako adibidean?}
+
+Klasea iragarri nahi dugun atributu helburua (\emph{target}-a) da. Ereduak ebatzi behar duen ezezaguna da, gainerako atributuen informazioan oinarrituta.
+
+
+
+
+
+
+
 \newpage
 \bibliographystyle{apalike}
 \bibliography{sample}
