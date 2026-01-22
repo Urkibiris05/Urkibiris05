@@ -1,0 +1,223 @@
+\documentclass{article}
+
+%%\chapterstyle{veelo}
+%% KAPITULU FORMATU BATZUK ARAZOAK EMATEN DITUZTE DOKUMENTUA 
+%% MOZTERAKOAN (croppedsize AUKERAREKIN, BEHEAN AGERTZEN DENA). 
+%% JARRAIAN ALTERNATIBA SGURU BATZUK DAUDE
+
+%\chapterstyle{default}
+%\chapterstyle{bianchi}
+%\chapterstyle{brotherton}
+%\chapterstyle{demo2}
+%\chapterstyle{ell}
+%\chapterstyle{ger}
+%\chapterstyle{wilsondob}
+
+
+
+
+
+
+%% PAKETE HONEN AGINDUAK ERABILTZEN BADIRA, ALDATU HIZKUNTZA AUKERA %%
+%% SI SE USAN LOS COMANDOS DE ESTE PAQUETE, CAMBIAR LA OPCIÓN DE IDIOMA %%
+\usepackage{cancel}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage[linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% INFORMAZIOA / INFORMACIÓN %%
+\newcommand{\egilea}{
+    Urko Bidaurre\\
+}
+\newcommand{\irakaslea} {
+      Ana Jesus Armendariz
+}
+\newcommand{\izenburua}{Lehenengo mugarria}
+\newcommand{\data}{\today}
+
+
+%% BAKARRIK BAT DESKOMENTATU, GRADU AMAIERAKO LANA BADA. BESTELA, DENAK KOMENTATU%%
+%% DESCOMENTAR SOLO UNO SI ES UN TRABAJO FIN DE GRADO. SINO, COMENTAR TODOS%%
+
+\newcommand{\ikasketak}{Kudeaketaren eta Informazio Sistemen Informatikaren Ingeniaritzako Gradua}
+%\newcommand{\ikasketak}{Grado en Ingeniería Informática}
+%\newcommand{\ikasketak}{Adimen Artifizialeko Gradua}
+%\newcommand{\ikasketak}{Grado en Inteligencia Artificial}
+
+
+%% BAKARRIK BAT DESKOMENTATU, INGENIARITZA INFORMATIKAKOA BADA. BESTELA, DENAK KOMENTATU %%
+%% DESCOMENTAR SOLO UNO SI ES EN INGENIERÍA INFORMÁTICA. SINO, COMENTAR TODOS %%
+
+%\newcommand{\espezialitatea}{Konputazioa}
+%\newcommand{\espezialitatea}{Computación}
+%\newcommand{\espezialitatea}{Software Ingeniaritza}
+%\newcommand{\espezialitatea}{Ingeniería de Software}
+%\newcommand{\espezialitatea}{Konputagailuen Ingeniaritza}
+\newcommand{\espezialitatea}{
+    Proiektuen Kudeaketa\\
+    }
+
+
+%% BAKARRIK BAT DESKOMENTATU MASTER AMAIERAKO LANA BADA. BESTELA, DENAK KOMENTATU%%
+%% DESCOMENTAR SOLO UNO SI ES UN TRABAJO FIN DE MASTER. SINO, COMENTAR TODOS%%
+
+%\newcommand{\ikasketak}{Máster Universitario en Ingeniería Computacional y Sistemas Inteligentes}
+%\newcommand{\ikasketak}{Konputazio Ingeniaritza eta Sistema Adimentsuak Unibertsitate Masterra}
+
+%% TESIENTZAKO KONFIGURATU
+%\newcommand{\saila}{Department of Computer Science and Artificial Intelligence}
+%\newcommand{\phdarloa}{Computer Science}
+%% KOMENTATU A4 FORMATUAN ATERATZEKO, FORMATU TXIKIAGOAN AGERTZEKO 
+%% GERO INPRIMATZEKO. MOZTEKO MARKAK IKUSTEKO GEHITU showtrims AUKERA
+%% memoir KLASEAREN ARGUMENTUETAN
+%\newcommand{\croppedsize}
+
+%% DOKUMENTUAREN HIZKUNTZA / IDIOMA DEL DOCUMENTO %%
+%% BAKARRIK BAT DESKOMENTATU / DESCOMENTAR SOLO UNO %%
+\newcommand{\euskaraz}
+%\newcommand{\castellano}
+%\newcommand{\english}
+
+
+\input config/macros
+
+\title{\izenburua}
+\author{\egilea}
+\date{\data}
+
+\begin{document}
+\thispagestyle{empty}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+
+\thispagestyle{empty}
+\begin{center}
+	
+  \includegraphics[width=0.75\textwidth]{config/FacultadInformatica-Gipuzkoa-bilingue-positivo-alta.jpg} \\[2cm]
+  
+  
+  {\LARGE {\gapizenburua}}\\[0.5cm]
+  {\Large \ikasketak}\\[0.25cm]
+  {\espezialitatea}
+  \vspace{2cm}
+  
+  
+  \HRule \\[0.5cm]
+  {\LARGE 
+    \textbf{\izenburua}
+  }
+  \HRule \\[0.5cm]
+
+  {\Large \textsl{\egilea}
+  
+   
+  \vfill
+  
+  \textbf{\zuzendariaktestua}\\
+  \irakaslea\\[2cm]
+  
+  \data
+  }
+  
+\end{center}
+\newpage
+\tableofcontents
+\newpage
+\section{Lehen fasea: Helburuaren eta testuinguruaren analisia}
+
+Lehen fase honetan, Proiektuen Kudeaketa irakasgaian xxxx nota eta lauhilekoan zehar denbora eskaini behar zaien gainontzeko jarduerak
+identifikatuko dira.
+
+\subsection{Helburu akademikoa}
+
+
+\subsection{Beste jarduera eta konpromiso batzuk}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|}
+  \hline  
+  \textbf{Jarduera} & \textbf{Asteko dedikazioa} \\ \hline
+  Erabakiak Hartzeko Euskarri Sistemak, Klaseak & 4 ordu \\ \hline
+  Erabakiak Hartzeko Euskarri Sistemak, Klasetik kanpo & 2 ordu \\ \hline
+  Datu-baseen Kudeaketa, Klaseak & 4 ordu \\ \hline
+  Datu-baseen Kudeaketa, Klasetik kanpo & 2 ordu \\ \hline
+  Proiektuen Kudeaketa, Klaseak & 4 ordu \\ \hline
+  Proiektuen Kudeaketa, Klasetik kanpo & 2 ordu \\ \hline
+  Web Sistemak, Klaseak & 4 ordu \\ \hline
+  Web Sistemak, Klasetik kanpo & 2 ordu \\ \hline
+  Enpresak Kudeatzeko Softwarea, Klaseak & 4 ordu \\ \hline
+  Enpresak Kudeatzeko Softwarea, Klasetik kanpo & 2 ordu \\ \hline
+  Musika akademia & 1 ordu \\ \hline
+  Musika, Klasetik kanpo & 1 ordu \\ \hline
+  Kirol jarduera & 10 ordu \\ \hline
+  Lan praktikak & 15 ordu \\ \hline
+  Klaserako bidaiak & 5 ordu \\ \hline
+  \textbf{GUZTIRA} & \textbf{62 ordu} \\ \hline
+\end{tabular}
+\caption{Astean zeharreko jarduera eta konpromisoak, dagokien ordu kopuruarekin}
+\label{tab:jarduerak_eta_konpromisoak}
+\end{table}
+  
+\section{Bigarren fasea: Arriskuen identifikazioa eta analisia}
+
+Atal honetan, planifikatutako jarduerak eta ibilbide akademikoa kontuan hartuta, helburutzat ezarritako nota lortzea eragotz dezaketen arriskuak identifikatuko dira.
+
+\subsection{Arriskuen identifikazioa}
+
+\subsection{Probabilitatea eta inpaktua}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  \textbf{P/I} & \textbf{Baxua (1)} & \textbf{Ertaina (3)} & \textbf{Altua (5)} \\ \hline
+  \textbf{Gertagaitz (1)} & \textbf{1} & \textbf{3} & \textbf{5}\\ \hline
+  \textbf{Erdia (3)} & \textbf{3} & \textbf{9} & \textbf{15} \\ \hline
+  \textbf{Probablea (5)} & \textbf{5} & \textbf{15} & \textbf{25} \\ \hline
+\end{tabular}
+\caption{Arrisku matrizea probabilitate eta inpaktuaren arabera}
+\label{tab:arrisku_matrizea}
+\end{table}
+\emph{Cursiva}
+
+\noindent \textbf{Negrita}
+ 
+\begin{align*}
+\min \quad & Z = \sum_{i,j} c_{ij} x_{ij} \\
+\text{non} \quad & \sum_j x_{ij} = 1 \quad \forall i 
+\quad \textit{(hiri guztiek esleipen bakarra)} \\
+& \sum_i x_{ij} = 1 \quad \forall j 
+\quad \textit{(hiri bakoitza behin esleitua)} \\
+& x_{ij} \in \{0,1\} \quad \forall i,j
+\end{align*}
+
+\[
+\renewcommand{\arraystretch}{1.2}
+\begin{array}{c|cccc|c}
+    & 1 & 2 & 3 & \cdots & n \\
+    \hline
+  1 & 0 & d_{12} & d_{13} & \cdots & d_{1n} \\
+  2 & d_{21} & 0 & d_{23} & \cdots & d_{2n} \\
+  3 & d_{31} & d_{32} & 0 & \cdots & d_{3n} \\
+  \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+  n & d_{n1} & d_{n2} & d_{n3} & \cdots & 0
+\end{array}
+\]
+
+\newpage
+%\bibliographystyle{alpha}
+%\bibliography{sample}
+\begin{itemize}
+    \item \emph{https://www.lystloc.com/blog/what-is-a-travelling-salesman-problem-tsp/}
+    \item \emph{SYMPLEX: SIMPLEX SOLVER}
+\end{itemize}
+
+\end{document}
