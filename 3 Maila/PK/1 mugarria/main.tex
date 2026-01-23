@@ -1,5 +1,6 @@
 \documentclass{article}
-
+% chktex-file 44
+% chktex-file 24
 %%\chapterstyle{veelo}
 %% KAPITULU FORMATU BATZUK ARAZOAK EMATEN DITUZTE DOKUMENTUA 
 %% MOZTERAKOAN (croppedsize AUKERAREKIN, BEHEAN AGERTZEN DENA). 
@@ -29,6 +30,8 @@
 \usetikzlibrary{arrows.meta}
 \usepackage{enumitem}
 \usepackage{graphicx}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \usepackage[linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 \usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
@@ -109,11 +112,11 @@
   \vspace{2cm}
   
   
-  \HRule \\[0.5cm]
+  \HRule\\[0.5cm]
   {\LARGE 
     \textbf{\izenburua}
   }
-  \HRule \\[0.5cm]
+  \HRule\\[0.5cm]
 
   {\Large \textsl{\egilea}
   
@@ -123,8 +126,7 @@
   \textbf{\zuzendariaktestua}\\
   \irakaslea\\[2cm]
   
-  \data
-  }
+  \data}
   
 \end{center}
 \newpage
@@ -140,10 +142,10 @@ identifikatuko dira.
 
 \subsection{Beste jarduera eta konpromiso batzuk}
 
-\begin{table}[h!]
+\begin{table}[ht]
 \centering
 \begin{tabular}{|l|c|}
-  \hline  
+  \hline 
   \textbf{Jarduera} & \textbf{Asteko dedikazioa} \\ \hline
   Erabakiak Hartzeko Euskarri Sistemak, Klaseak & 4 ordu \\ \hline
   Erabakiak Hartzeko Euskarri Sistemak, Klasetik kanpo & 2 ordu \\ \hline
@@ -162,7 +164,7 @@ identifikatuko dira.
   Klaserako bidaiak & 5 ordu \\ \hline
   \textbf{GUZTIRA} & \textbf{62 ordu} \\ \hline
 \end{tabular}
-\caption{Astean zeharreko jarduera eta konpromisoak, dagokien ordu kopuruarekin}
+\caption{Astean zeharreko jarduera eta konpromisoak, dagokien ordu kopuruarekin}%
 \label{tab:jarduerak_eta_konpromisoak}
 \end{table}
   
@@ -174,7 +176,7 @@ Atal honetan, planifikatutako jarduerak eta ibilbide akademikoa kontuan hartuta,
 
 \subsection{Probabilitatea eta inpaktua}
 
-\begin{table}[h!]
+\begin{table}[ht]
 \centering
 \begin{tabular}{|c|c|c|c|}
   \hline
@@ -183,41 +185,44 @@ Atal honetan, planifikatutako jarduerak eta ibilbide akademikoa kontuan hartuta,
   \textbf{Erdia (3)} & \textbf{3} & \textbf{9} & \textbf{15} \\ \hline
   \textbf{Probablea (5)} & \textbf{5} & \textbf{15} & \textbf{25} \\ \hline
 \end{tabular}
-\caption{Arrisku matrizea probabilitate eta inpaktuaren arabera}
+\caption{Arrisku matrizea probabilitate eta inpaktuaren arabera}%
 \label{tab:arrisku_matrizea}
 \end{table}
 
 \subsection{Arrisku-adierazle nagusiak eta konponbide-adierazleak}
 
-\begin{table}[h!]
+\begin{table}[ht]
   \centering
-  \begin{tabular}{|c|c|c|c|c|c|c|c|}
+  \renewcommand{\arraystretch}{1.3}
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{|C{1.8cm}|C{2.1cm}|C{1cm}|C{1cm}|C{1.6cm}|C{1.8cm}|C{2cm}|C{2.2cm}|}
     \hline
-    \textbf{Arriskuaren IDa} & \textbf{Arriskuaren deskribapena} & \textbf{Probabilitatea} & \textbf{Inpaktoa} & \textbf{Arriskua ($ P \times I $)} & \textbf{Kategoria} & \textbf{Arrisku adierazle nagusiak} & \textbf{Konponbide adierazleak} \\ \hline
-  \end{tabular}
-  \caption{Identifikatutako arriskuen informazioa}
+    \textbf{Arriskuaren IDa} & \textbf{Arriskuaren deskribapena} & \textbf{$P$} & \textbf{$I$} & \textbf{Arriskua ($ P \times I $)} & \textbf{Kategoria} & \textbf{Arrisku adierazle nagusiak} & \textbf{Konponbide adierazleak} \\ \hline
+    1 & Jarduera akademikoak ez betetzea & 3 & 5 & 15 & Akademikoa & Astean zeharreko jarduera eta konpromisoak (ikus \ref{tab:jarduerak_eta_konpromisoak}) & Denbora kudeaketa hobetzea \\ \hline
+  \end{tabular}}
+  \caption{Identifikatutako arriskuen informazioa}%
   \label{tab:arriskuen_informazioa}
 \end{table}
 
 \section{Hirugarren fasea: Arriskuen erantzun plana}
 
-\begin{table}[h!]
+\begin{table}[ht]
   \centering
   \begin{tabular}{|c|l|l|}
     \hline
     \textbf{ID} & \textbf{Prebentzio-plana} & \textbf{Kontingentzia-plana} \\ \hline
   \end{tabular}
-  \caption{Arriskuen gaineko erantzun planak}
-  \label{tab:arriskuen_informazioa}
+  \caption{Arriskuen gaineko erantzun planak}%
+  \label{tab:erantzun_planak}
 \end{table}
 
-
+%BIBLIOGRAFIA/ERREFERENTZIAK
 \newpage
 %\bibliographystyle{alpha}
 %\bibliography{sample}
 \begin{itemize}
-    \item \emph{https://www.lystloc.com/blog/what-is-a-travelling-salesman-problem-tsp/}
-    \item \emph{SYMPLEX: SIMPLEX SOLVER}
+  \item \url{https://www.lystloc.com/blog/what-is-a-travelling-salesman-problem-tsp/}
+  \item \emph{SYMPLEX:\@ SIMPLEX SOLVER}
 \end{itemize}
 
 \end{document}
