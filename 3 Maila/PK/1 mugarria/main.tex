@@ -186,31 +186,31 @@ Atal honetan, planifikatutako jarduerak eta ibilbide akademikoa kontuan hartuta,
 \caption{Arrisku matrizea probabilitate eta inpaktuaren arabera}
 \label{tab:arrisku_matrizea}
 \end{table}
-\emph{Cursiva}
 
-\noindent \textbf{Negrita}
- 
-\begin{align*}
-\min \quad & Z = \sum_{i,j} c_{ij} x_{ij} \\
-\text{non} \quad & \sum_j x_{ij} = 1 \quad \forall i 
-\quad \textit{(hiri guztiek esleipen bakarra)} \\
-& \sum_i x_{ij} = 1 \quad \forall j 
-\quad \textit{(hiri bakoitza behin esleitua)} \\
-& x_{ij} \in \{0,1\} \quad \forall i,j
-\end{align*}
+\subsection{Arrisku-adierazle nagusiak eta konponbide-adierazleak}
 
-\[
-\renewcommand{\arraystretch}{1.2}
-\begin{array}{c|cccc|c}
-    & 1 & 2 & 3 & \cdots & n \\
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
-  1 & 0 & d_{12} & d_{13} & \cdots & d_{1n} \\
-  2 & d_{21} & 0 & d_{23} & \cdots & d_{2n} \\
-  3 & d_{31} & d_{32} & 0 & \cdots & d_{3n} \\
-  \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
-  n & d_{n1} & d_{n2} & d_{n3} & \cdots & 0
-\end{array}
-\]
+    \textbf{Arriskuaren IDa} & \textbf{Arriskuaren deskribapena} & \textbf{Probabilitatea} & \textbf{Inpaktoa} & \textbf{Arriskua ($ P \times I $)} & \textbf{Kategoria} & \textbf{Arrisku adierazle nagusiak} & \textbf{Konponbide adierazleak} \\ \hline
+  \end{tabular}
+  \caption{Identifikatutako arriskuen informazioa}
+  \label{tab:arriskuen_informazioa}
+\end{table}
+
+\section{Hirugarren fasea: Arriskuen erantzun plana}
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|c|l|l|}
+    \hline
+    \textbf{ID} & \textbf{Prebentzio-plana} & \textbf{Kontingentzia-plana} \\ \hline
+  \end{tabular}
+  \caption{Arriskuen gaineko erantzun planak}
+  \label{tab:arriskuen_informazioa}
+\end{table}
+
 
 \newpage
 %\bibliographystyle{alpha}
