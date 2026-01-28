@@ -8,7 +8,7 @@ import weka.attributeSelection.BestFirst;
 import weka.attributeSelection.CfsSubsetEval;
 import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayes;
-import weka.classifiers.lazy.IB1;
+//import weka.classifiers.lazy.IB1;
 import weka.core.Capabilities;
 import weka.core.Instances;
 import weka.filters.Filter;
