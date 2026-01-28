@@ -1,0 +1,351 @@
+\documentclass{article}
+% chktex-file 44
+% chktex-file 24
+%%\chapterstyle{veelo}
+%% KAPITULU FORMATU BATZUK ARAZOAK EMATEN DITUZTE DOKUMENTUA 
+%% MOZTERAKOAN (croppedsize AUKERAREKIN, BEHEAN AGERTZEN DENA). 
+%% JARRAIAN ALTERNATIBA SGURU BATZUK DAUDE
+
+%\chapterstyle{default}
+%\chapterstyle{bianchi}
+%\chapterstyle{brotherton}
+%\chapterstyle{demo2}
+%\chapterstyle{ell}
+%\chapterstyle{ger}
+%\chapterstyle{wilsondob}
+
+
+
+
+
+
+%% PAKETE HONEN AGINDUAK ERABILTZEN BADIRA, ALDATU HIZKUNTZA AUKERA %%
+%% SI SE USAN LOS COMANDOS DE ESTE PAQUETE, CAMBIAR LA OPCIÓN DE IDIOMA %%
+\usepackage{cancel}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage[linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% INFORMAZIOA / INFORMACIÓN %%
+\newcommand{\egilea}{
+    Urko Bidaurre\\
+}
+\newcommand{\irakaslea} {
+      Alicia Perez Ramirez
+}
+\newcommand{\izenburua}{Eredu iragarlea eta bere kalitatearen estimazioa}
+\newcommand{\data}{\today}
+
+
+%% BAKARRIK BAT DESKOMENTATU, GRADU AMAIERAKO LANA BADA. BESTELA, DENAK KOMENTATU%%
+%% DESCOMENTAR SOLO UNO SI ES UN TRABAJO FIN DE GRADO. SINO, COMENTAR TODOS%%
+
+\newcommand{\ikasketak}{Kudeaketaren eta Informazio Sistemen Informatikaren Ingeniaritzako Gradua}
+%\newcommand{\ikasketak}{Grado en Ingeniería Informática}
+%\newcommand{\ikasketak}{Adimen Artifizialeko Gradua}
+%\newcommand{\ikasketak}{Grado en Inteligencia Artificial}
+
+
+%% BAKARRIK BAT DESKOMENTATU, INGENIARITZA INFORMATIKAKOA BADA. BESTELA, DENAK KOMENTATU %%
+%% DESCOMENTAR SOLO UNO SI ES EN INGENIERÍA INFORMÁTICA. SINO, COMENTAR TODOS %%
+
+%\newcommand{\espezialitatea}{Konputazioa}
+%\newcommand{\espezialitatea}{Computación}
+%\newcommand{\espezialitatea}{Software Ingeniaritza}
+%\newcommand{\espezialitatea}{Ingeniería de Software}
+%\newcommand{\espezialitatea}{Konputagailuen Ingeniaritza}
+\newcommand{\espezialitatea}{
+    Erabakiak Hartzeko Euskarri Sistemak\\
+    }
+
+
+%% BAKARRIK BAT DESKOMENTATU MASTER AMAIERAKO LANA BADA. BESTELA, DENAK KOMENTATU%%
+%% DESCOMENTAR SOLO UNO SI ES UN TRABAJO FIN DE MASTER. SINO, COMENTAR TODOS%%
+
+%\newcommand{\ikasketak}{Máster Universitario en Ingeniería Computacional y Sistemas Inteligentes}
+%\newcommand{\ikasketak}{Konputazio Ingeniaritza eta Sistema Adimentsuak Unibertsitate Masterra}
+
+%% TESIENTZAKO KONFIGURATU
+%\newcommand{\saila}{Department of Computer Science and Artificial Intelligence}
+%\newcommand{\phdarloa}{Computer Science}
+%% KOMENTATU A4 FORMATUAN ATERATZEKO, FORMATU TXIKIAGOAN AGERTZEKO 
+%% GERO INPRIMATZEKO. MOZTEKO MARKAK IKUSTEKO GEHITU showtrims AUKERA
+%% memoir KLASEAREN ARGUMENTUETAN
+%\newcommand{\croppedsize}
+
+%% DOKUMENTUAREN HIZKUNTZA / IDIOMA DEL DOCUMENTO %%
+%% BAKARRIK BAT DESKOMENTATU / DESCOMENTAR SOLO UNO %%
+\newcommand{\euskaraz}
+%\newcommand{\castellano}
+%\newcommand{\english}
+
+
+\input config/macros
+
+\title{\izenburua}
+\author{\egilea}
+\date{\data}
+
+\begin{document}
+\thispagestyle{empty}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+
+\thispagestyle{empty}
+\begin{center}
+	
+  \includegraphics[width=0.75\textwidth]{config/FacultadInformatica-Gipuzkoa-bilingue-positivo-alta.jpg} \\[2cm]
+  
+  
+  {\LARGE {\gapizenburua}}\\[0.5cm]
+  {\Large \ikasketak}\\[0.25cm]
+  {\espezialitatea}
+  \vspace{2cm}
+  
+  
+  \HRule\\[0.5cm]
+  {\LARGE 
+    \textbf{\izenburua}
+  }
+  \HRule\\[0.5cm]
+
+  {\Large \textsl{\egilea}
+  
+   
+  \vfill
+  
+  \textbf{\zuzendariaktestua}\\
+  \irakaslea\\[2cm]
+  
+  \data}
+  
+\end{center}
+\newpage
+\tableofcontents
+\newpage
+
+\section{Helburuak}
+\textbf{Aldez aurretiko konpetentziak:} datu meatzaritzak burutu ahal dituen ataza ezberdinak bereizteko gai izan (sailkapen gainbegiratua, clustering ala sailkapen ez-gainbegiratua, asoziazioa)
+ataza bakoitzari buruzko adibideak ezagutu. Gainera, instantziak eta atributuak definitzeko
+gaitasuna behar da.
+
+Datuetatik abiatuta, eredu iragarlearen inferentzia egitea Weka erabiliz. Eredu iragarlearen
+kalitatearen estimazioa egitea dauden ebaluazio eskema desberdinen bidez. Sailkatzaileen kalitatea neurtzeko ebaluazio neurriak interpretatzeko trebetasuna hartzea. Hurrengo konpetentziak
+landu:
+
+\begin{itemize}
+  \item \textbf{Zeharkako konpetentziak:}
+  \begin{itemize}
+    \item Lan autonomoa
+    \item Pentsamendu kritikoa
+  \end{itemize}
+  \item \textbf{Konpetentzia espezifikoak:}
+  \begin{itemize}
+    \item Sailkapen gainbegiratua definitzeko gai izatea
+    \item Eredu iragarlearen kalitatea estimatzeko ebaluazio eskemak bereiztea: train vs. test,
+hold-out, k-fold cross validation.
+    \item Ebaluazio neurri ezberdinak interpretatzeko gai izatea: accuracy, precision, recall,
+f-measure, . . .
+  \end{itemize}
+\end{itemize}
+ 
+\section{Gidoia}
+
+Praktika hau eredu iragarleak datuetatik sortu eta ereduen kalitatea estimatzen zentratzen da.
+Eredu iragarleari sailkatzaile gainbegiratu deritza. Zergatik deitzen zaio sailkapen “gainbegiratua”? Arrazoia hau da: eredua atributu konkretu bat iragartzeko
+erabiltzen da (atributu horri “klase” deritza) eta eredu iragarlea edo sailkatzaile gainbegiratua
+sortzeko erabiltzen diren datuetan klasea ezagutzea ezinbestekoa da. Alegia, ikasketa, gainbegiratutako (klasearen balioa daukaten) datuekin egiten da. Klase atributua zein den adierazi
+behar da (defektuz, Wekak azkena hartzen du).
+
+\subsection{Datuen Azterketa}
+
+Praktika honetako datu fitxategi nagusiak: \texttt{adult.train.arff} eta \texttt{adult.test.arff} dira. Datu meatzaritzarekin hasteko, lortutako
+datu sorta analizatzea komeni da, bermatu atazarako datu adierazgarriak direla eta gogoan izan
+\emph{missing}, \emph{unique}, \emph{different}, korrelazioak etab.
+
+\noindent \textbf{1 \ Ariketa.} \ Datuen Analisia \\
+\emph{Arakatu atazarako eman diren fitxategiak eta hurrengo galderei erantzun:}
+
+\noindent \emph{1. \ Zertan datza? Zer motako ataza da (iragarpena, clustering, asoziazioa)?}
+
+Ataza pertsona batek 50 mila € baino gehiago irabazten dituen ala ez iragartzean, haren datu demografikoetan oinarrituta. Iragarpen ataza bat da, izan ere, atributu espezifiko baten balioa iragartzean datza (klasea), beste atributuen balioetan oinarrituta. Sistemak erantzun zuzena ezagutzen den iraganeko
+adibideetatik ikasten du.
+
+\noindent \emph{2. \ Esku artean dugun datu sorta erabil daiteke sailkapen gainbegiratua aplikatzeko? Emandako
+instantziak sailkatuta daude?}
+
+Bai erabil daitezke, izan ere, datu sorta sailkatuta dago (instantzia bakoitzeko bere atributuak eta dagokion klasea adirazten dira).
+
+\noindent \emph{3. \ Buruketako deskribapenaren arabera, klaseak zenbat balio har ditzake? Emandako datu
+sortan, zenbat balio erregistratu dira klaserako? zein da klaseko balioen distribuzioa entrenamendu multzoan? eta test multzoan?}
+
+Klaseak bi balio har ditzake: {$ \leq 50K $, $ > 50K $}. Entrenamendu multzoan, proportzioak \%75'9 eta \%24'1 dira. Test sortan, ordea, \%76'4 eta \%23'6.
+
+\noindent \emph{4. \ Test multzoa deskribatzeko zehazki entrenamendu multzoan erabili diren atributuak erabili
+behar dira, hala da emandako multzoetan?}
+
+Bai, hala da. Test multzoa deskribatzeko, entrenamendu multzoan erabilitako atributu berberak erabiltzen dira.
+
+\noindent \emph{5. \ Zenbat instantzia daude entrenamendu multzoan? eta test multzoan?}
+
+Entrenamendu multzoan, 32.561 instantzia daude, eta test multzoan, 16.281.
+
+\subsection{Sailkapen gainbegiratua}
+
+Sailkapen gainbegiratuan, sailkatutako datu multzo batetik abiatuta ezagutza (eredu iragarlea)
+lortzea ahalbidetzen da eta hori erabiltzea sailkatu gabeko datuak sailkatzeko.
+
+Wekako \texttt{Classify} atalean sartu. \texttt{Classifier} $\rightarrow$ \texttt{Choose}: bertan sailkatzaile algoritmo familiak agertzen dira. Hurrengo sailkatzaileak bilatu eta bilatu zertan oinarritzen diren iragarpenak
+egiteko. Informazioa bilatzeko: \texttt{More} botoian sakatu, \emph{Wikispaces}en bilatu edo kontsulta-liburuan
+bilatu:
+
+\begin{itemize}
+  \item \textbf{\texttt{ZeroR} (Zero Rules):} Oinarrizko algoritmoa da. Ez die atributuei kasurik egiten eta soilik klaseak har dezakeen balio probableena iragartzen du. Kasu honetan, < = 50K iragartzen du kasu guztietarako.
+  \item \textbf{\texttt{OneR} (One Rule):} Atributu bakar baten balioetan oinarritzen da iragarpena egiteko, hain zuzen ere, errore baxuena duen atributuan. 
+  \item \textbf{\texttt{IBk} (Instance-Based \emph{k}-Nearest Neighbors):} Ez du eredu "ikusgarririk" sortzen (erregelak), baizik eta datuak memorizatu. Instantzia berri baten klasea iragartzeko, \emph{k} auzoko gertuenak bilatzen ditu eta hortik bozkatu egiten du.
+\end{itemize}
+
+\subsection{Ebaluazio eskemak}
+
+\noindent Sailkatzailea ezezik, sailkatzailearen iragarpen gaitasunak ematea ezinbestekoa da. Sailkatzaile
+baten kalitatearen estimazioa egiteko hurrengo ebaluazio eskemak daude:
+
+\begin{itemize}
+  \item \textbf{Train vs dev:} gainbegiratutako bi multzo emanda, eredua multzo handiarekin entrenatu
+(Train multzoarekin) eta beste multzoaren gainean (development) ebaluatu iragarritako
+klasea klase errealarekin bat datorren edo ez.
+  \begin{itemize}
+    \item \textbf{Ebaluazio teknika ez-zintzoa:} eredua ebaluatzeko entrenamendurako erabilitako
+  \end{itemize}
+  \item  \textbf{Hold-out:} gainbegiratutako multzo bakar bat izanda, multzo hori ausaz desordenatu (\emph{randomize}) eta bitan banatzen da adb. \%66a Train gisa eta \%33a Test bezala erabiltzeko Train
+vs. Test eskema erabiliz. Gomendagarria izaten da eskema hau n aldiz errepikatzea (adb.
+n=5) eta lortutako emaitza guztien batazbestekoa eta desbiderapen estandarra ematea
+multzoarekin berarekin. Honek, estimatutako kalitatearen goi bornea emango luke,
+ez da kalitatearen estimazio errealista.
+  \item \textbf{K-fold crossvalidation:} ebaluazio gurutzatu anizkoitza (k-koitza).
+  \begin{itemize}
+    \item  \textbf{Leave-one-out:} \emph{K-fold crossvalidation} eskemaren kasu berezia da non k-ren balioa multzoan dagoen instantzia kopurua den. Alegia, instantiza bezainbeste trainebaluazio esperimentu egingo dira eta esperimentu bakoitzean erabiliko den test multzoak instantzia bakar bat baino ez du izango.
+  \end{itemize}
+\end{itemize}
+
+\noindent \textbf{3. \ Ariketa.} \ Ebaluazio eskemak \\
+
+\noindent \emph{1. \ Osatu k-fCV definizioa}: 
+
+Teknika honetan, datasetak tamaina bereko $k$ partizio (folds) egiten ditu ausaz. Prozesua $k$ aldiz errepikatzen da: iterazio bakoitzean, partizio bat erabiltzen da testerako, eta beste $k-1$ entrenamendurako. Azken emaitza $k$ esperimentuen batuketa edo batazbestekoa da. Datu guztiak behin testatzeko erabiliko direla bermatzen du.
+
+\noindent \emph{2. \ Zer ezberdintasun dago k-fCV eta k aldiz errepikatutako hold-out artean?}
+
+\emph{k-fCV}n, instantzia bakoitza zehazki behin erabiltzen da test-a egiteko, hau da, partizioak osagarriak dira. Errepikatutako \emph{hold-out}ean, ordea, ausazko partiketak egiten dira hainbat aldi independentez. Ondorioz, gerta liteke instantziaren bat beti train sortan edo test sortan banatzea.
+
+\noindent \emph{3. \ Aztertu Wekako \texttt{Test options} aukeren artean nola gauzatu aurreko eskema bakoitza.}
+
+\begin{itemize}
+  \item \textbf{Train vs dev:} \texttt{Use training set} aukera hautatuz. Kontuz! Ebaluazio ez-zintzoa. 
+  \item \textbf{Hold-out:} \texttt{Percentage split} aukera hautatuz. 
+  \item \textbf{k-fold crossvalidation:} \texttt{Cross-validation} aukera hautatuz eta k-ren balioa zehaztuz.
+  \item \textbf{Train vs test:} \texttt{Supplied test set} aukera hautatuz eta test fitxategia zehaztuz.
+\end{itemize}
+
+\noindent \emph{4. \ Aukeratu arestian aipatutako sailkatzaileetako bat eta \texttt{adult.test.arff} erabili ebaluaziorako.}
+\begin{itemize}
+  \item \emph{Zabaldu testu editore batekin \texttt{adult.test.arff} fitxategia, sailkatuta daude instantziak? zergatik?}
+\end{itemize}
+
+Bai, klasifikatuta daude, izan ere, ebaluazioa egiteko (ereduak asmatu duen jakiteko), jakin behar dugu erantzun zuzena zein den (\emph{Ground Truth}). Wekak erantzun hau ezkutatzen dio ereduari iragartzerako orduan, eta gero iragarpena alderatzen du erantzun zuzenarekin, ereduaren asmatze-tasa lortzeko.
+
+\subsection{Ebaluazio neurriak: nahasmen matrizea eta neurri eratorriak}
+
+\noindent \textbf{4. \ Ariketa.} \ \emph{Meritu-figurak} \\
+\emph{Definitu, formula matematikoen laguntzaz, hauetako bakoitza bi klasedun problemarako:}
+
+\begin{itemize}
+  \item Nahasmen-matrizea: m[i,j] (ala m[j,i] aplikazio batzuetan) iragarleak zenbat aldiz esan duen
+i klasea eta errealitatean j klasea zen. Zutabe eta errenkaden ordenari dagokionez hitzarmenik ez dagoenez, esplizituki adierazi behar da, izan ere, Wekak halaxe dakar: estimatutako
+“\emph{classified as}” bezala denotatzen du.
+  \item Nahasmen matrizean oinarrituta, definitu hurrengoak:
+  \begin{itemize}
+    \item $TPRate=Recall=Sensitivity$: Iragarleak i esanaren eta i izanaren proportzioa. 
+    \item $FPRate$: Iragarleak i esanaren eta j izanaren proportzioa.
+    \item $TNRate=Specificity$: Iragarleak j esanaren eta j izanaren proportzioa.
+    \item $FNRate$: Iragarleak j esanaren eta i izanaren proportzioa.
+  \end{itemize}
+  \item Accuracy (Asmatze-tasa): Iragarleak i edo j esanaren eta i edo j izanaren proportzioa, hurrenez hurren.
+  \begin{equation*}
+    Accuracy = \frac{TP + TN}{TP + TN + FP + FN}
+  \end{equation*}
+  \item Precision: Iragarleak i esanaren eta i izanaren proportzioa.
+  \begin{equation*}
+    Precision = \frac{TP}{TP + FP}
+  \end{equation*}
+  \item Recall: Iragarleak i esanaren eta i izanaren proportzioa.
+  \item F-measure: Precision eta Recall-en arteko harmoniarako batezbestekoa. ??????
+  \begin{equation*}
+    F_{measure} = \frac{2 \cdot Precision \cdot Recall}{Precision + Recall}
+  \end{equation*}
+\end{itemize}
+
+\noindent \textbf{5. \ Ariketa.} \ \emph{Klase bakoitzeko eta klaseka ponderatutako batazbestekoa}
+
+\large{TODO}
+
+\begin{enumerate}[label=\emph{\arabic*.}]
+  \item \emph{Aztertu 3 klase edo gehiago duen datu sorta bat. Wekak emaitzak klase bakoitzeko ematen
+ditu, nola interpretatzen dira emaitza horiek?}
+  \item \emph{Wekak batazbesteko ponderatuak ematen ditu, nola lortzen dira emaitza horiek?}
+  \item \emph{Micro-average eta Macro-average definitu meritu figurentzat (precision, recall, f-score)}
+\end{enumerate}
+
+\subsection{Kalitatea hobetzeko parametro erabakigarriak}
+
+\noindent \texttt{Classifier} atalean, sailkatzailea aukeratzean (\texttt{ZeroR} kasuan izan ezik), sailkatzailearen parametro sorta definitzen da. 
+\vspace{0.2cm}
+
+\noindent \textbf{6. \ Ariketa.} \ \emph{Parametro karakteristikoak eta beste faktore erabakigarri:}
+\begin{enumerate}
+  \item Non topatu ahal da algoritmo bakoitzaren parametro karakteristikoei buruzko informazio
+gehiago?
+  \item Zertarako dira parametro horiek sailkatzaile bakoitzean?
+  \item Sailkatzailearen parametroak aldatuz, aldatzen dira lortutako emaitzak?
+  \item Aztertu \texttt{Classifier} output atalean agertzen den informazioa. Bertan, hasieran sailkatzeilearen parametro batzuk zehazten dira.
+  \begin{enumerate}
+    \item Zer adierazten dute parametro hauek?
+    \item Bilatu parametroak sailkatzeileetan, aldatu eta egiaztatu informazio hau aldatu dela
+atal horretan.
+  \end{enumerate}
+  \item Eredu iragarle baten kalitatea eredu hori lortzeko erabili den algoritmoak determinatzen
+du neurri handi batean, baina algoritmoak ez ezik, algoritmo horretarako ezarritako  parametroak eta ikasteko eskuragarri dagoen datu sorta ere erabakigarriak izaten dira.
+  \begin{enumerate}
+    \item Instantzien \%30 kenduta, zenbat deterioratzen dira emaitzak? (aztertu \texttt{remove} filtroak)
+    \item Atributu gutxiago erabilita, emaitzak deterioratzen dira orokorrean? kasu guztietan?
+  \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+%\bibliographystyle{alpha}
+%\bibliography{sample}
+%\begin{itemize}
+%   \item \emph{https://www.lystloc.com/blog/what-is-a-travelling-salesman-problem-tsp/}
+%   \item \emph{SYMPLEX: SIMPLEX SOLVER}
+%\end{itemize}
+
+\end{document}
