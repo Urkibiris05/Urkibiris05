@@ -26,6 +26,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amssymb}
 \usepackage{tikz}
+\usepackage{makecell}
+\usepackage{ragged2e}
 \usetikzlibrary{positioning}
 \usetikzlibrary{arrows.meta}
 \usepackage{enumitem}
@@ -134,13 +136,23 @@
 \newpage
 \section{Lehen fasea: Helburuaren eta testuinguruaren analisia}
 
-Lehen fase honetan, Proiektuen Kudeaketa irakasgaian xxxx nota eta lauhilekoan zehar denbora eskaini behar zaien gainontzeko jarduerak
-identifikatuko dira.
+Atal honen helburu nagusia proiektuaren helmuga zehaztea eta hori lortzeko ingurunea aztertzea da. 
+Proiektu honetan, ``Proiektuen Kudeaketa'' irakasgaian lortu nahi den kalifikazioa ezarriko da helburu gisa, 
+eta lauhilekoan zehar eragina izango duten gainerako jarduerak identifikatuko dira denbora-kudeaketa egokia bermatzeko.
 
 \subsection{Helburu akademikoa}
+Proiektuaren arrakasta neurtzeko, helburu kuantitatibo eta zehatz bat definitu da. Helburu hau \textbf{SMART} irizpideen arabera (Espezifikoa, Neurgarria, Lor daitekeena, Esanguratsua eta Denboran mugatua) formulatu da, 
+ikasturte amaieran lortu nahi den nota-tartea zehaztuz.
 
+\begin{itemize}
+  \item \textbf{Helburua:} 9 eta 10 bitartean.
+\end{itemize}
 
 \subsection{Beste jarduera eta konpromiso batzuk}
+Helburu akademikoa lortzeko bidea ez da isolatuta gertatzen; ikaslearen errealitatea osatzen duten beste hainbat aldagaik baldintzatzen dute. 
+Hori dela eta, jarraian lauhilekoan zehar nire denbora eta arreta eskatuko duten jarduera guztiak identifikatu dira, 
+bai akademikoak (beste irakasgaiak), bai pertsonalak (kirola, lana, etab.). 
+Analisi honek aukera ematen du benetako lan-karga dimentsionatzeko eta balizko denbora-gatazkak aurreikusteko.
 
 \begin{table}[ht]
 \centering
@@ -159,22 +171,45 @@ identifikatuko dira.
   Enpresak Kudeatzeko Softwarea, Klasetik kanpo & 2 ordu \\ \hline
   Musika akademia & 1 ordu \\ \hline
   Musika, Klasetik kanpo & 1 ordu \\ \hline
-  Kirol jarduera & 10 ordu \\ \hline
+  Kirol jarduera & 13 ordu \\ \hline
   Lan praktikak & 15 ordu \\ \hline
   Klaserako bidaiak & 5 ordu \\ \hline
-  \textbf{GUZTIRA} & \textbf{62 ordu} \\ \hline
+  \textbf{GUZTIRA} & \textbf{65 ordu} \\ \hline
 \end{tabular}
 \caption{Astean zeharreko jarduera eta konpromisoak, dagokien ordu kopuruarekin}%
 \label{tab:jarduerak_eta_konpromisoak}
 \end{table}
   
+\newpage
 \section{Bigarren fasea: Arriskuen identifikazioa eta analisia}
 
-Atal honetan, planifikatutako jarduerak eta ibilbide akademikoa kontuan hartuta, helburutzat ezarritako nota lortzea eragotz dezaketen arriskuak identifikatuko dira.
+Behin helburua eta testuingurua argi izanda, atal honetan helburu hori betetzea oztopa dezaketen ziurgabetasun-egoerak aztertuko dira. 
+Ez dira arazoak identifikatzen (jada gertatu edo ziur gertatuko diren gertaerak), baizik eta gerta daitezkeen eta helburuan eragin negatiboa edo positiboa izan dezaketen arriskuak.
 
 \subsection{Arriskuen identifikazioa}
 
+Arriskuak modu integralean identifikatzeko, hainbat kategoria hartu dira kontuan: denbora-kudeaketa, ikaskuntza-prozesua, osasuna, kanpo-faktoreak eta faktore pertsonalak. 
+Prozesu honen bidez, proiektuaren garapenean eragina izan dezaketen gertaera potentzialen zerrenda osatu da:
+
+\begin{itemize}
+  \item \textbf{Ustekabeko lan-karga:} Bigarren lauhileko honetan, lan-praktika batzuekin hasiko nahiz, eta horrek denbora eskatuko du. 
+  Nahiz eta teorian 15 ordu astero lan egin behar izan, bestelako arrazoiengatik ordu gehiago sartu behar izana gerta liteke. Horretaz gain, 
+  lauhilekoan zehar bestelako ikasgaiek aurreikusitakoa baino ordu kopuru gehiago eskatzea ere gerta liteke.
+  \item \textbf{Presioa:} Nahiz eta lan egin beharra dagoenean lan egiten duen eta denbora modu egokian kudeatzen duen pertsona bezala identifikatzen naizen,
+  gerta liteke lauhileko honek suposatu dezakeen presioak eta lan-kargak nire errendimendua eragoztea.
+  \item \textbf{Prokastinazioa:} gailu elektronikoetara etengabeko esposizioak (bideojokoak, sare-sozialak, etab.) nire arreta eta errendimendua oztopa dezake.
+  \item \textbf{Gaixotasunak:} aurreikusi ezin diren osasun-arazoek denbora-galera eragin dezakete, bai ikasketa-prozesuan, bai proiektuaren garapenean.
+  \item \textbf{Kirolaren ondorioz sortzen diren lesioak:} astero 5 gimnasio entrenamendu egiteak, karga nahiko pisutsuak mugitzen ditudalarik, lesioak eragin ditzake, 
+  proiektuaren garapena oztopa dezaketenak.
+  \item \textbf{Berandu oheratzea:} egunean zeharko jarduerak eta konpromisoak direla eta, gerta liteke aisialdirako denbora gutxi izatea eta denbora hori berandu oheratuz betetzea,
+  eguneroko errendimenduan eragin handia izan dezakeena.
+\end{itemize}
+
 \subsection{Probabilitatea eta inpaktua}
+
+Identifikatutako arrisku bakoitza lehentasunen arabera sailkatzeko, Probabilitate-Inpaktu matrizea erabili da. 
+Metodologia honi esker, arrisku bakoitzari balio kuantitatibo bat esleitu zaio $P \times I$ formula erabiliz. 
+Emaitzaren arabera, arriskuak hiru mailatan kategorizatu dira: kritikoak ($P \times I \ge 15$), esanguratsuak ($3 < P \times I \le 9$) eta moderatuak ($P \times I \le 3$).
 
 \begin{table}[ht]
 \centering
@@ -189,16 +224,26 @@ Atal honetan, planifikatutako jarduerak eta ibilbide akademikoa kontuan hartuta,
 \label{tab:arrisku_matrizea}
 \end{table}
 
+\newpage
 \subsection{Arrisku-adierazle nagusiak eta konponbide-adierazleak}
-    qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq2waw 2ww2wqq
+
+Arriskuak gauzatu aurretik detektatzeko, alerta-seinaleak edo adierazle nagusiak definitu dira. 
+Adierazle hauek neurgarriak eta zehatzak dira, eta aukera ematen dute arrisku baten probabilitatea handitzen ari den jakiteko, horrela erantzun goiztiarra eman ahal izateko. 
+Era berean, egoera normaltzen dela baieztatzeko konponbide-adierazleak ere zehaztu dira.
+
 \begin{table}[ht]
   \centering
   \renewcommand{\arraystretch}{1.3}
   \resizebox{\textwidth}{!}{%
-  \begin{tabular}{|C{1.8cm}|C{2.1cm}|C{1cm}|C{1cm}|C{1.6cm}|C{1.8cm}|C{2cm}|C{2.2cm}|}
+  \begin{tabular}{|C{1.8cm}|C{2.1cm}|C{1.4cm}|C{1cm}|C{1.4cm}|C{1.8cm}|C{2.2cm}|C{2cm}|}
     \hline
     \textbf{Arriskuaren IDa} & \textbf{Arriskuaren deskribapena} & \textbf{$P$} & \textbf{$I$} & \textbf{Arriskua ($ P \times I $)} & \textbf{Kategoria} & \textbf{Arrisku adierazle nagusiak} & \textbf{Konponbide adierazleak} \\ \hline
-    1 & Jarduera akademikoak ez betetzea & 3 & 5 & 15 & Akademikoa & Astean zeharreko jarduera eta konpromisoak (ikus \ref{tab:jarduerak_eta_konpromisoak}) & Denbora kudeaketa hobetzea \\ \hline
+    R-1 & Ustekabeko lan-karga & Probablea & Ertaina & 15 & Kritikoa & \raggedright-Ataza sinpleetan esperotako baino denbora gehiago inbertitu behar izana  & TODO \\ \hline
+    R-2 & Presioa & Erdia & Ertaina & 9 & Esanguratsua & -Urduritasuna \newline -Humore txarra \newline -Azukrearekiko tentazio handiagoa & TODO \\ \hline
+    R-3 & Prokastinazioa & Probablea & Ertaina & 15 & Kritikoa & \raggedright-Gailu elektronikoetan egunero gastatutako denbora handitzea & TODO \\ \hline
+    R-4 & Gaixotasunak & Gertagaitz & Ertaina & 3 & Moderatua & \raggedright-Gorputzaren nekea eta ahultasuna \newline -Buruko mina \newline -Estula\newline -Mukiak & TODO \\ \hline
+    R-5 & Kirolaren ondorioz sortzen diren lesioak & Gertagaitz & Ertaina & 3 & Moderatua & \raggedright-Giharren ondoeza pisuak mugitzerakoan \newline -Mugikortasun murrizketak & TODO \\ \hline
+    R-6 & Berandu oheratzea & Erdia & Ertaina & 9 & Esanguratsua & \raggedright-Lugura egunean zehar \newline -Goizean nekatuta altxatzea & TODO \\ \hline
   \end{tabular}}
   \caption{Identifikatutako arriskuen informazioa}%
   \label{tab:arriskuen_informazioa}
