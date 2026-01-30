@@ -1,22 +1,17 @@
 package prak2;
 
-//import weka.attributeSelection.BestFirst;
-//import weka.attributeSelection.CfsSubsetEval;
 import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayes;
 import weka.core.Instances;
 import weka.core.converters.ConverterUtils;
 import weka.filters.Filter;
 import weka.filters.supervised.instance.Resample;
-//import weka.filters.supervised.attribute.AttributeSelection;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
-import java.util.Random;
 
-public class prak2_hold_out {
-
+public class prak2_repeated_hold_out {
     public static void main(String[] args) throws Exception {
         //argumentuetatik path-ak jaso
         String dataPath = args[0];
@@ -47,46 +42,53 @@ public class prak2_hold_out {
         //filtroa aplikatu
         Instances newData = Filter.useFilter(data, filter);
         */
+        double[][] confusionMatrixSum = null;
+        for (int w=0; w<10; w++) {
 
-        //EREDU IRAGARLEA INFERITU
-        //ML algoritmoa aukeratu
-        NaiveBayes nb = new NaiveBayes();
+            //EREDU IRAGARLEA INFERITU
+            //ML algoritmoa aukeratu
+            NaiveBayes nb = new NaiveBayes();
 
-        //hold-out metodoaren arabera, datuak bi zatitan banatu: train (%70) eta test (%30)
-        //train
-        int seed = 1;
-        Resample resample = new Resample();
-        resample.setRandomSeed(seed);
-        resample.setBiasToUniformClass(0.0);
-        resample.setSampleSizePercent(70.0);
-        resample.setNoReplacement(true);
-        resample.setInputFormat(data);
-        Instances trainData = Filter.useFilter(data, resample);
-        //test
-        resample.setInvertSelection(true);
-        resample.setInputFormat(data);
-        Instances testData = Filter.useFilter(data, resample);
-        nb.buildClassifier(trainData);
+            //hold-out metodoaren arabera, datuak bi zatitan banatu: train (%70) eta test (%30)
+            //train
+            int seed = 1;
+            Resample resample = new Resample();
+            resample.setRandomSeed(seed);
+            resample.setBiasToUniformClass(0.0);
+            resample.setSampleSizePercent(70.0);
+            resample.setNoReplacement(true);
+            resample.setInputFormat(data);
+            Instances trainData = Filter.useFilter(data, resample);
+            //test
+            resample.setInvertSelection(true);
+            resample.setInputFormat(data);
+            Instances testData = Filter.useFilter(data, resample);
+            nb.buildClassifier(trainData);
 
-        /*EREDU IRAGARLEA INFERITU BESTE ERA BATEAN
-        //hold-out metodoaren arabera, datuak bi zatitan banatu: train (%70) eta dev (%30)
-        int seed = 1;
-        float trainSizeRatio = 0.7f;
-        // int folds = 10;
-        Random rand = new Random(seed); //seed=1 berdina izan dadin exekuzio guztietan
-        Instances randData = new Instances(newData);
-        randData.randomize(rand);
-        int trainSize = (int) Math.round(randData.numInstances() * trainSizeRatio);
-        int testSize = randData.numInstances() - trainSize;
-        Instances trainData = new Instances(randData, 0, trainSize);
-        Instances testData = new Instances(randData, trainSize, testSize);
-        nb.buildClassifier(trainData);
-        */
+            /*EREDU IRAGARLEA INFERITU BESTE ERA BATEAN
+            //hold-out metodoaren arabera, datuak bi zatitan banatu: train (%70) eta dev (%30)
+            int seed = 1;
+            float trainSizeRatio = 0.7f;
+            // int folds = 10;
+            Random rand = new Random(seed); //seed=1 berdina izan dadin exekuzio guztietan
+            Instances randData = new Instances(newData);
+            randData.randomize(rand);
+            int trainSize = (int) Math.round(randData.numInstances() * trainSizeRatio);
+            int testSize = randData.numInstances() - trainSize;
+            Instances trainData = new Instances(randData, 0, trainSize);
+            Instances testData = new Instances(randData, trainSize, testSize);
+            nb.buildClassifier(trainData);
+            */
+            //EBALUATU
 
-        //EBALUATU
-
-        Evaluation eval = new Evaluation(trainData);
-        eval.evaluateModel(nb, testData);
+            Evaluation eval = new Evaluation(trainData);
+            eval.evaluateModel(nb, testData);
+            if (w == 0) {
+                confusionMatrixSum = eval.confusionMatrix();
+            } else {
+                confusionMatrixSum = prak2_repeated_hold_out.addMatrices(confusionMatrixSum, eval.confusionMatrix());
+            }
+        }
 
         //EMAITZAK ESKURATU eta EXPORTATU
         try {
@@ -131,5 +133,17 @@ public class prak2_hold_out {
             System.out.println("ERROR: Ezin izan dira emaitzak idatzi");
             System.out.println(e.getMessage());
         }
+
+
+    }
+
+    double[][] addMatrices(double[][] a, double[][] b) {
+        double[][] result = new double[a.length][a[0].length];
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                result[i][j] = a[i][j] + b[i][j];
+            }
+        }
+        return result;
     }
 }
