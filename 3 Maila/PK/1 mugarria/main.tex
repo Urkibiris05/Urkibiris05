@@ -34,6 +34,9 @@
 \usepackage{graphicx}
 \usepackage{array}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{float}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
 \usepackage[linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 \usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
@@ -44,7 +47,7 @@
 \newcommand{\irakaslea} {
       Ana Jesus Armendariz
 }
-\newcommand{\izenburua}{Lehenengo mugarria}
+\newcommand{\izenburua}{Bakarkako Proiektua}
 \newcommand{\data}{\today}
 
 
@@ -150,9 +153,23 @@ ikasturte amaieran lortu nahi den nota-tartea zehaztuz.
 
 \subsection{Beste jarduera eta konpromiso batzuk}
 Helburu akademikoa lortzeko bidea ez da isolatuta gertatzen; ikaslearen errealitatea osatzen duten beste hainbat aldagaik baldintzatzen dute. 
-Hori dela eta, jarraian lauhilekoan zehar nire denbora eta arreta eskatuko duten jarduera guztiak identifikatu dira, 
-bai akademikoak (beste irakasgaiak), bai pertsonalak (kirola, lana, etab.). 
-Analisi honek aukera ematen du benetako lan-karga dimentsionatzeko eta balizko denbora-gatazkak aurreikusteko.
+Hori dela eta, jarraian, lauhilekoan zehar nire denbora eta arreta eskatuko duten jarduera guztiak identifikatu dira, bai oinarrizkoak (lo egin, jan, higienea, etab.),
+bai akademikoak (klaseak, ikasketak, etab.) eta bai pertsonalak (kirola, lana, etab.). 
+Analisi honek aukera ematen du benetako lan-karga dimentsionatzeko eta balizko denbora-gatazkak aurreikusteko. 
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|c|}
+  \hline 
+  \textbf{Oinarrizko Jarduera} & \textbf{Asteko dedikazioa} \\ \hline
+  Lo orduak & 52'5 ordu \\ \hline
+  Jan orduak & 8 ordu \\ \hline
+  Higienea & 2'5 ordu \\ \hline
+  \textbf{GUZTIRA} & \textbf{63 ordu} \\ \hline
+\end{tabular}
+\caption{Astean zeharreko oinarrizko jarduerak, dagokien ordu kopuruarekin}%
+\label{tab:oinarrizko_jarduerak}
+\end{table}
 
 \begin{table}[ht]
 \centering
@@ -160,30 +177,34 @@ Analisi honek aukera ematen du benetako lan-karga dimentsionatzeko eta balizko d
   \hline 
   \textbf{Jarduera} & \textbf{Asteko dedikazioa} \\ \hline
   Erabakiak Hartzeko Euskarri Sistemak, Klaseak & 4 ordu \\ \hline
-  Erabakiak Hartzeko Euskarri Sistemak, Klasetik kanpo & 2 ordu \\ \hline
+  Erabakiak Hartzeko Euskarri Sistemak, Klasetik kanpo & 3 ordu \\ \hline
   Datu-baseen Kudeaketa, Klaseak & 4 ordu \\ \hline
-  Datu-baseen Kudeaketa, Klasetik kanpo & 2 ordu \\ \hline
+  Datu-baseen Kudeaketa, Klasetik kanpo & 3 ordu \\ \hline
   Proiektuen Kudeaketa, Klaseak & 4 ordu \\ \hline
-  Proiektuen Kudeaketa, Klasetik kanpo & 2 ordu \\ \hline
+  Proiektuen Kudeaketa, Klasetik kanpo & 3 ordu \\ \hline
   Web Sistemak, Klaseak & 4 ordu \\ \hline
-  Web Sistemak, Klasetik kanpo & 2 ordu \\ \hline
+  Web Sistemak, Klasetik kanpo & 3 ordu \\ \hline
   Enpresak Kudeatzeko Softwarea, Klaseak & 4 ordu \\ \hline
-  Enpresak Kudeatzeko Softwarea, Klasetik kanpo & 2 ordu \\ \hline
+  Enpresak Kudeatzeko Softwarea, Klasetik kanpo & 3 ordu \\ \hline
   Musika akademia & 1 ordu \\ \hline
   Musika, Klasetik kanpo & 1 ordu \\ \hline
-  Kirol jarduera & 13 ordu \\ \hline
+  Kirol jarduera & 15 ordu \\ \hline
   Lan praktikak & 15 ordu \\ \hline
   Klaserako bidaiak & 5 ordu \\ \hline
-  \textbf{GUZTIRA} & \textbf{65 ordu} \\ \hline
+  \textbf{GUZTIRA} & \textbf{72 ordu} \\ \hline
 \end{tabular}
-\caption{Astean zeharreko jarduera eta konpromisoak, dagokien ordu kopuruarekin}%
+\caption{Astean zeharreko bestelako jarduera eta konpromisoak, dagokien ordu kopuruarekin}%
 \label{tab:jarduerak_eta_konpromisoak}
 \end{table}
+
+\noindent Behin astean zeharreko jarduera bakoitzak zenbat denbora eramaten duen aztertuta, \textbf{astero batezbesteko 135 ordu} inbertitzen direla 
+edonolako jardueretan ondorioztatzen da. Kontuan izanda aste batek 168 ordu dituela, 33 ordu geratuko lirateke soberan, aisialdian edo aurreikusi gabeko
+bestelako jarduera edo konpromisoetan erabiltzeko (gertaera bereziak, irteerak, ezusteko lan-karga, etab.).
   
 \newpage
 \section{Bigarren fasea: Arriskuen identifikazioa eta analisia}
 
-Behin helburua eta testuingurua argi izanda, atal honetan helburu hori betetzea oztopa dezaketen ziurgabetasun-egoerak aztertuko dira. 
+\noindent Behin helburua eta testuingurua argi izanda, atal honetan helburu hori betetzea oztopa dezaketen ziurgabetasun-egoerak aztertuko dira. 
 Ez dira arazoak identifikatzen (jada gertatu edo ziur gertatuko diren gertaerak), baizik eta gerta daitezkeen eta helburuan eragin negatiboa edo positiboa izan dezaketen arriskuak.
 
 \subsection{Arriskuen identifikazioa}
@@ -197,11 +218,11 @@ Prozesu honen bidez, proiektuaren garapenean eragina izan dezaketen gertaera pot
   lauhilekoan zehar bestelako ikasgaiek aurreikusitakoa baino ordu kopuru gehiago eskatzea ere gerta liteke.
   \item \textbf{Presioa:} Nahiz eta lan egin beharra dagoenean lan egiten duen eta denbora modu egokian kudeatzen duen pertsona bezala identifikatzen naizen,
   gerta liteke lauhileko honek suposatu dezakeen presioak eta lan-kargak nire errendimendua eragoztea.
-  \item \textbf{Prokastinazioa:} gailu elektronikoetara etengabeko esposizioak (bideojokoak, sare-sozialak, etab.) nire arreta eta errendimendua oztopa dezake.
+  \item \textbf{Prokrastinazioa:} gailu elektronikoetara etengabeko esposizioak (bideojokoak, sare-sozialak, etab.) nire arreta eta errendimendua oztopa dezake.
   \item \textbf{Gaixotasunak:} aurreikusi ezin diren osasun-arazoek denbora-galera eragin dezakete, bai ikasketa-prozesuan, bai proiektuaren garapenean.
   \item \textbf{Kirolaren ondorioz sortzen diren lesioak:} astero 5 gimnasio entrenamendu egiteak, karga nahiko pisutsuak mugitzen ditudalarik, lesioak eragin ditzake, 
   proiektuaren garapena oztopa dezaketenak.
-  \item \textbf{Berandu oheratzea:} egunean zeharko jarduerak eta konpromisoak direla eta, gerta liteke aisialdirako denbora gutxi izatea eta denbora hori berandu oheratuz betetzea,
+  \item \textbf{Berandu oheratzea:} egunean zeharreko jarduerak eta konpromisoak direla eta, gerta liteke aisialdirako denbora gutxi izatea eta denbora hori berandu oheratuz betetzea,
   eguneroko errendimenduan eragin handia izan dezakeena.
 \end{itemize}
 
@@ -216,9 +237,9 @@ Emaitzaren arabera, arriskuak hiru mailatan kategorizatu dira: kritikoak ($P \ti
 \begin{tabular}{|c|c|c|c|}
   \hline
   \textbf{P/I} & \textbf{Baxua (1)} & \textbf{Ertaina (3)} & \textbf{Altua (5)} \\ \hline
-  \textbf{Gertagaitz (1)} & \textbf{1} & \textbf{3} & \textbf{5}\\ \hline
-  \textbf{Erdia (3)} & \textbf{3} & \textbf{9} & \textbf{15} \\ \hline
-  \textbf{Probablea (5)} & \textbf{5} & \textbf{15} & \textbf{25} \\ \hline
+  \textbf{Gertagaitz (1)} & \cellcolor{green!30}\textbf{1} & \cellcolor{green!30}\textbf{3} & \cellcolor{yellow!50}\textbf{5}\\ \hline
+  \textbf{Erdia (3)} & \cellcolor{green!30}\textbf{3} & \cellcolor{yellow!50}\textbf{9} & \cellcolor{red!40}\textbf{15} \\ \hline
+  \textbf{Probablea (5)} & \cellcolor{yellow!50}\textbf{5} & \cellcolor{red!40}\textbf{15} & \cellcolor{red!40}\textbf{25} \\ \hline
 \end{tabular}
 \caption{Arrisku matrizea probabilitate eta inpaktuaren arabera}%
 \label{tab:arrisku_matrizea}
@@ -231,43 +252,52 @@ Arriskuak gauzatu aurretik detektatzeko, alerta-seinaleak edo adierazle nagusiak
 Adierazle hauek neurgarriak eta zehatzak dira, eta aukera ematen dute arrisku baten probabilitatea handitzen ari den jakiteko, horrela erantzun goiztiarra eman ahal izateko. 
 Era berean, egoera normaltzen dela baieztatzeko konponbide-adierazleak ere zehaztu dira.
 
-\begin{table}[ht]
+\begin{table}[H]
   \centering
   \renewcommand{\arraystretch}{1.3}
   \resizebox{\textwidth}{!}{%
   \begin{tabular}{|C{1.8cm}|C{2.1cm}|C{1.4cm}|C{1cm}|C{1.4cm}|C{1.8cm}|C{2.2cm}|C{2cm}|}
     \hline
     \textbf{Arriskuaren IDa} & \textbf{Arriskuaren deskribapena} & \textbf{$P$} & \textbf{$I$} & \textbf{Arriskua ($ P \times I $)} & \textbf{Kategoria} & \textbf{Arrisku adierazle nagusiak} & \textbf{Konponbide adierazleak} \\ \hline
-    R-1 & Ustekabeko lan-karga & Probablea & Ertaina & 15 & Kritikoa & \raggedright-Ataza sinpleetan esperotako baino denbora gehiago inbertitu behar izana  & TODO \\ \hline
-    R-2 & Presioa & Erdia & Ertaina & 9 & Esanguratsua & -Urduritasuna \newline -Humore txarra \newline -Azukrearekiko tentazio handiagoa & TODO \\ \hline
-    R-3 & Prokastinazioa & Probablea & Ertaina & 15 & Kritikoa & \raggedright-Gailu elektronikoetan egunero gastatutako denbora handitzea & TODO \\ \hline
-    R-4 & Gaixotasunak & Gertagaitz & Ertaina & 3 & Moderatua & \raggedright-Gorputzaren nekea eta ahultasuna \newline -Buruko mina \newline -Estula\newline -Mukiak & TODO \\ \hline
-    R-5 & Kirolaren ondorioz sortzen diren lesioak & Gertagaitz & Ertaina & 3 & Moderatua & \raggedright-Giharren ondoeza pisuak mugitzerakoan \newline -Mugikortasun murrizketak & TODO \\ \hline
-    R-6 & Berandu oheratzea & Erdia & Ertaina & 9 & Esanguratsua & \raggedright-Lugura egunean zehar \newline -Goizean nekatuta altxatzea & TODO \\ \hline
+    R-1 & Ustekabeko lan-karga & Probablea & Ertaina & 15 & Kritikoa & \raggedright-Ataza sinpleetan esperotako baino denbora gehiago inbertitu behar izana  & \raggedright\arraybackslash-Bestelako jardueretarako denbora soberan izatea \\ \hline
+    R-2 & Presioa & Erdia & Ertaina & 9 & Esanguratsua & \raggedright-Urduritasuna \newline -Humore txarra \newline -Azukrearekiko tentazio handiagoa & \raggedright\arraybackslash-Humore ona \newline-Lasaitasuna egunean zehar \\ \hline
+    R-3 & Prokrastinazioa & Probablea & Ertaina & 15 & Kritikoa & \raggedright-Gailu elektronikoak erabiltzeko tentazio ugariagoak & \raggedright\arraybackslash-Egunean zehar proposatutako betebeharrak betetzea oztoporik gabe \\ \hline
+    R-4 & Gaixotasunak & Gertagaitz & Ertaina & 3 & Moderatua & \raggedright-Gorputzaren nekea eta ahultasuna \newline -Buruko mina \newline -Eztula\newline -Mukiak & \raggedright\arraybackslash-Egunean zehar energia altua izatea \newline-Ondoeza desagertzea\\ \hline
+    R-5 & Kirolaren ondorioz sortzen diren lesioak & Gertagaitz & Ertaina & 3 & Moderatua & \raggedright-Giharren ondoeza pisuak mugitzerakoan \newline -Mugikortasun murrizketak & \raggedright\arraybackslash-Gimnasioan hobekuntzak ikustea (kargak, errepikapenak, etab.) \newline-Giharren ondoezarik ez \\ \hline
+    R-6 & Berandu oheratzea & Erdia & Ertaina & 9 & Esanguratsua & \raggedright-Etxera berandu iristea, aisialdirako denborarik izan gabe & \raggedright\arraybackslash-Egunero gogotsu oheratzea \newline-Oheratu baino lehen gailu elektronikoak erabili ez izana \\ \hline
   \end{tabular}}
   \caption{Identifikatutako arriskuen informazioa}%
   \label{tab:arriskuen_informazioa}
 \end{table}
 
+\newpage
 \section{Hirugarren fasea: Arriskuen erantzun plana}
 
-\begin{table}[ht]
+Arriskuen kudeaketa eraginkorra ez da soilik identifikazioan oinarritzen, baizik eta horiei aurre egiteko estrategia zehatzak prestatzean. 
+Fase honetan, arrisku bakoitzerako bi plan mota garatu dira: prebentzio-plana eta kontingentzia-plana. 
+
+\noindent Prebentzio-planaren helburua arriskua gertatu aurretik esku hartzea da, 
+haren gertatzeko probabilitatea murrizteko edota inpaktua txikitzeko. Neurri hauek proiektuaren egunerokoan integratu dira ezustekoak saihesteko.
+
+\noindent Kontingentzia-planean, ordea, jada gertatutako arriskuek sor ditzaketen kalteak minimizatzea eta egoera berreskuratzeko ekintzak zehaztea bilatzen da. 
+Neurri hauek behin prebentzio-neurriek huts egiten dutenean aplikatzen dira.
+
+\begin{table}[H]
   \centering
-  \begin{tabular}{|c|l|l|}
+  \renewcommand{\arraystretch}{1.3}
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{|C{0.6cm}|C{6cm}|C{6cm}|}
     \hline
     \textbf{ID} & \textbf{Prebentzio-plana} & \textbf{Kontingentzia-plana} \\ \hline
-  \end{tabular}
+    R-1 & \raggedright\arraybackslash- Praktiketako arduradunarekin aste bakoitzeko helburuak eta ordutegia (15 ordu) zorrotz zehaztu. \newline- Astero irakasgai guztien lan-karga berrikusi eta lehentasunak ezarri. \newline- Segurtasun-tarteak utzi asteko plangintzan ezustekoetarako. & \raggedright\arraybackslash- Aisialdiko edo kirol-jarduerak aldi baterako murriztu denbora irabazteko. \newline- Ezinbestekoak ez diren entregak edo konpromiso sozialak atzeratu. \newline- Pilatutako lana berreskuratzeko beranduago oheratu. \\ \hline
+    R-2 & \raggedright\arraybackslash- Egunero atsedenaldi laburrak (\emph{Pomodoro} teknika, adibidez) eta deskonexio momentuak errespetatu. \newline- Helburu errealistak eta zatikatuak jarri egun bakoitzerako, gauzak pixkanaka lantzeko. & \raggedright\arraybackslash- Egun libre oso bat hartu, erabat deskonektatzeko eta energia berreskuratzeko. \newline- Ingurukoei (lagunak, familia \ldots) laguntza eskatu eta egoera pertsonala haiekin partekatu, presioak eragindako sama arintzeko. \\ \hline
+    R-3 & \raggedright\arraybackslash- Ikasketa prozesuetan mugikorra beste gela batean utzi. \newline- ``Forest'' edo antzeko aplikazioak erabili distrakzio digitalak blokeatzeko. \newline- Lan-saioak gailu elektronikorik gabeko ingurune batean (adibidez, liburutegian) egin, distrakzioak ekiditeko. & \raggedright\arraybackslash- ``Detox digital'' asteburu bat egin: sare sozialak eta bideojokoak erabat kendu. \newline- Elkarrekin ikasteko eta lan egiteko kide bat bilatu, erantzukizunak betetzera bultzatu dezakeena. \\ \hline
+    R-4 & \raggedright\arraybackslash- Lo orduak (7-8 ordu) eta elikadura osasuntsua zorrotz zaindu. \newline- Higiene neurriak mantendu eta tenperatura aldaketetatik babestu. & \raggedright\arraybackslash- Gorputzari arreta eman eta eskatzen duen atsedena behar den bezala hartu. \newline- Ikaskideei galdutako klaseetako apunteak eta materiala eskatu. \newline- Osatu ondoren, ikasketa-plana berrantolatu galdutakoa berreskuratzeko. \\ \hline
+    R-5 & \raggedright\arraybackslash- Entrenamenduetan teknika lehenetsi pisuaren gainetik. \newline- Beroketa eta luzatze ariketak beti egin saio bakoitzaren aurretik eta ondoren. & \raggedright\arraybackslash- Fisioterapeuta batengana joan lesioa tratatzeko. \newline- Entrenamenduak aldi baterako eten eta denbora hori errehabilitaziorako eta ikasketak aurreratzeko erabili. \\ \hline
+    R-6 & \raggedright\arraybackslash- Oheratzea gogorarazteko alarmak ezarri. \newline- Oheratu baino ordubete lehenago pantailak saihestu. \newline- Afari arinak eta goiztiarrak egin. & \raggedright\arraybackslash- Hurrengo egunean 20 minutuko (luzeagoa ez) siesta egin energia berreskuratzeko. \newline- Hurrengo gauean ohikoa baino ordubete lehenago oheratu lo-zorra ezabatzeko. \newline- Goizeko kafea edo bestelako estimulatzaileak ekiditu eguerditik aurrera, lo-zikloa berrezartzeko. \\ \hline
+  \end{tabular}}
   \caption{Arriskuen gaineko erantzun planak}%
   \label{tab:erantzun_planak}
 \end{table}
-
-%BIBLIOGRAFIA/ERREFERENTZIAK
-\newpage
-%\bibliographystyle{alpha}
-%\bibliography{sample}
-\begin{itemize}
-  \item \url{https://www.lystloc.com/blog/what-is-a-travelling-salesman-problem-tsp/}
-  \item \emph{SYMPLEX:\@ SIMPLEX SOLVER}
-\end{itemize}
 
 \end{document}
