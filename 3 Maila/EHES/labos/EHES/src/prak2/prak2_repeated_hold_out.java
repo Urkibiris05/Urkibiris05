@@ -43,6 +43,7 @@ public class prak2_repeated_hold_out {
         Instances newData = Filter.useFilter(data, filter);
         */
         double[][] confusionMatrixSum = null;
+        Evaluation eval = new Evaluation(data);
         for (int w=0; w<10; w++) {
 
             //EREDU IRAGARLEA INFERITU
@@ -81,13 +82,8 @@ public class prak2_repeated_hold_out {
             */
             //EBALUATU
 
-            Evaluation eval = new Evaluation(trainData);
+
             eval.evaluateModel(nb, testData);
-            if (w == 0) {
-                confusionMatrixSum = eval.confusionMatrix();
-            } else {
-                confusionMatrixSum = prak2_repeated_hold_out.addMatrices(confusionMatrixSum, eval.confusionMatrix());
-            }
         }
 
         //EMAITZAK ESKURATU eta EXPORTATU

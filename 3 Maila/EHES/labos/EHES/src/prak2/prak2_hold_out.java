@@ -58,7 +58,7 @@ public class prak2_hold_out {
         Resample resample = new Resample();
         resample.setRandomSeed(seed);
         resample.setBiasToUniformClass(0.0);
-        resample.setSampleSizePercent(70.0);
+        resample.setSampleSizePercent(80.0);
         resample.setNoReplacement(true);
         resample.setInputFormat(data);
         Instances trainData = Filter.useFilter(data, resample);
